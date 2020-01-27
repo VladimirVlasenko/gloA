@@ -1,10 +1,27 @@
-let num = '266219';
 
-let arr = num.toString().split('');
-const reducer = (a, b) => a*b;
+let lang = confirm('Вы говорите на русском языке?');
+console.log(lang);
+if (lang == true) {
+    console.log('Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье');
+} else if (lang == false) {
+    console.log('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+};
 
-let mult = arr.reduce(reducer);
-console.log(mult);
+switch (lang) {
+    case true: console.log('Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье');
+    break;
+    default: console.log('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+}
 
-let mult2 = (mult **3 ).toString().split('');
-console.log(mult2[0] + mult2[1]);
+var lang_array = [];
+lang_array['ru'] = ['Пн','Вт','СР','Чт','Пт','Сб','Вс'];
+lang_array['en'] = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+var lang1 = 'ru';
+console.log(lang_array[lang1]);
+
+let namePerson = prompt('Введите ваше имя');
+
+let message = (namePerson == 'Артем') ? 'Директор':
+    (namePerson == 'Максим') ? 'Преподаватель' :
+    'Студент';
+console.log(message);
