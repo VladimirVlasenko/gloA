@@ -83,71 +83,166 @@
 
 // const mathPow = funcMath(5);
 // mathPow();
-let gg = function(){
-  let a = (Math.round(Math.random(1, 100)*100, 0)).toString();
-  console.log(typeof a);
-  console.log(a);
-  let b = +a;
-  console.log(b);
-  let c = 0;
-  let game = function() {
-    let count = function() {
-      c++;
-      let f = 10 - c;
-      if(f === -1) {
-        let oneMore = function () {
-          let d = confirm('Попытки закончились! Хотите сыграть еще?');
-          if(d === true) {
-            gg();
-          } else {
-            alert('Спасибо за игру! Приходите еще! В следующий раз обязательно повезет!');
-          }
-        }
-        oneMore();
-      }
-      console.log(f);
-      console.log(typeof f);
-      return f;
-    };
 
-    let countNumber = +count();
+// let gg = function(){
+//   let a = (Math.round(Math.random(1, 100)*100, 0)).toString();
+//   console.log(typeof a);
+//   console.log(a);
+//   let b = +a;
+//   console.log(b);
+//   let c = 0;
+//   let game = function() {
+//     let count = function() {
+//       c++;
+//       let f = 10 - c;
+//       if(f === -1) {
+//         let oneMore = function () {
+//           let d = confirm('Попытки закончились! Хотите сыграть еще?');
+//           if(d === true) {
+//             gg();
+//           } else {
+//             alert('Спасибо за игру! Приходите еще! В следующий раз обязательно повезет!');
+//           }
+//         }
+//         oneMore();
+//       }
+//       console.log(f);
+//       console.log(typeof f);
+//       return f;
+//     };
 
-    let quest = prompt('Угадай число от 1 до 100');
-      console.log(quest);
-      if (quest > b) {
-      alert('Заданное число меньше. У вас осталось ' + countNumber + ' попыток!');
-      return game();
-    } else if (+quest === +0) {
-      alert('Игра закончена');
-      let oneMore = function () {
-        let d = confirm('Сыграем еще?');
-        if(d === true) {
-          gg();
-        } else {
-          alert('Спасибо за игру! Приходите еще! В следующий раз обязательно повезет!');
-        }
-      }
-      oneMore();
-    } else if (quest < b && quest > 0) {
-      alert('Загаданное число больше! У вас осталось ' + countNumber + ' попыток!');
-      return game();
-    } else if (isNaN(quest)) {
-      alert('Введите число');
-      return game();
-    }  else if (quest == b ) {
-      alert('Вы угадали! Поздравляем с победой! Вы заработали 100 очков!');
-      let oneMore = function () {
-        let d = confirm('Сыграем еще?');
-        if(d === true) {
-          gg();
-        } else {
-          alert('Спасибо за игру! Приходите еще! У вас уникальная интуиция!');
-        }
-      }
-      oneMore();
-    }
-  };
+//     let countNumber = +count();
 
-  game();
-}
-gg();
+//     let quest = prompt('Угадай число от 1 до 100');
+//       console.log(quest);
+//       if (quest > b) {
+//       alert('Заданное число меньше. У вас осталось ' + countNumber + ' попыток!');
+//       return game();
+//     } else if (+quest === +0) {
+//       alert('Игра закончена');
+//       let oneMore = function () {
+//         let d = confirm('Сыграем еще?');
+//         if(d === true) {
+//           gg();
+//         } else {
+//           alert('Спасибо за игру! Приходите еще! В следующий раз обязательно повезет!');
+//         }
+//       }
+//       oneMore();
+//     } else if (quest < b && quest > 0) {
+//       alert('Загаданное число больше! У вас осталось ' + countNumber + ' попыток!');
+//       return game();
+//     } else if (isNaN(quest)) {
+//       alert('Введите число');
+//       return game();
+//     }  else if (quest == b ) {
+//       alert('Вы угадали! Поздравляем с победой! Вы заработали 100 очков!');
+//       let oneMore = function () {
+//         let d = confirm('Сыграем еще?');
+//         if(d === true) {
+//           gg();
+//         } else {
+//           alert('Спасибо за игру! Приходите еще! У вас уникальная интуиция!');
+//         }
+//       }
+//       oneMore();
+//     }
+//   };
+
+//   game();
+// }
+// gg();
+
+// let car = {
+//   model: 'mazda',
+//   year: 2006,
+//   turbocharging: true,
+//   specification: [],
+//   style: {
+//     color: 'blue'
+//   }
+// };
+
+// for(let key in car) {
+//   console.log('Ключ: ' + key + ', Значение: ' + car[key]);
+// }
+
+// console.log(Object.keys(car).length);
+
+
+// let arr = [1, 45, 3, 65, 5];
+
+// for(let i = 0; i < arr.length; i++) {
+// console.log(arr[i]);
+// }
+
+// arr.forEach(function(item, i, array) {
+//   console.log(item, i, array);
+// })
+
+// for(let item of arr) {
+//   console.log(item);
+// }
+
+// delete arr[3];
+// console.log('arr: ', arr[3]);
+// console.log(arr);
+
+// let obj = {
+//   a: 3,
+//   b: true,
+//   c: 'js'
+// };
+
+// delete obj.b;
+// console.log(obj);
+
+
+// let week = ["понедельник","вторник","среда","четверг","пятница","суббота","воскресенье"];
+
+// for (let item of week) {
+//   console.log(item);
+//   if (item === "вторник") {
+//     console.log('<b>'+ item + '</b>');
+//   }
+// }
+
+setInterval(function() {
+  let date = new Date(),
+      h = date.getHours(),
+      m = date.getMinutes(),
+      s = date.getSeconds(),
+      y = date.getFullYear() + ' года',
+      mh = date.getMonth(),
+      d = date.getDate(),
+      day = date.getDay();
+      d = (+mh === 0) ? ' ' + d + ' января ': (+mh === 1) ? ' ' +  d + ' февраля ' : (+mh === 2) ?
+        d + ' марта ': (+mh === 3) ? ' апреля ' : (+mh === 4) ? 'мая': (+mh === 5) ? 'июня' :
+        (+mh === 6) ? 'июля' : (+mh === 7) ? 'августа' : (+mh === 8) ? 'сентября' : (+mh === 9) ?
+        'октября' : (+mh === 10) ? 'ноября' : 'декабря';
+      day = (+day === 1) ? ' Понедельник': (+day === 2) ? ' вторник' : (+day === 3) ? ' среда' :
+        (+day === 4) ? ' четверг' :
+        (+day ===5) ? ' пятница' : (+day === 6) ? ' суббота' : ' воскресенье';
+      h = (+h === 1 || +h === 21) ? ' ' + h + ' час ' : (+h === 2 || +h ===3 || +h === 4 ||
+        +h === 22 || +h === 23) ? ' ' + h + ' часа ' : ' ' + h + ' часов ';
+      m = m + ' минут ';
+      s = s + ' секунд';
+      document.querySelector('.firstDate').innerHTML = 'Сегодня' + day + ',' + d + y + ',' + h + m + s; 
+}, 1000);
+
+setInterval(function() {
+  let date = new Date(),
+      h = date.getHours(),
+      m = date.getMinutes(),
+      s = date.getSeconds(),
+      y = date.getFullYear(),
+      mh = date.getMonth(),
+      d = date.getDate(),
+      day = date.getDay();
+      d = (d < 10) ? '0' + d : d;
+      mh = ++mh;
+      mh = (mh < 10) ? '0' + mh : mh;
+      document.querySelector('.secondDate').innerHTML = d + '.' + mh + '.' + y + ' - ' + h + ':' + m + '.' + s + '`'; 
+}, 1000);
+
+
