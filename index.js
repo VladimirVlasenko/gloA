@@ -207,42 +207,59 @@
 //   }
 // }
 
-setInterval(function() {
-  let date = new Date(),
-      h = date.getHours(),
-      m = date.getMinutes(),
-      s = date.getSeconds(),
-      y = date.getFullYear() + ' года',
-      mh = date.getMonth(),
-      d = date.getDate(),
-      day = date.getDay();
-      d = (+mh === 0) ? ' ' + d + ' января ': (+mh === 1) ? ' ' +  d + ' февраля ' : (+mh === 2) ?
-        d + ' марта ': (+mh === 3) ? ' апреля ' : (+mh === 4) ? 'мая': (+mh === 5) ? 'июня' :
-        (+mh === 6) ? 'июля' : (+mh === 7) ? 'августа' : (+mh === 8) ? 'сентября' : (+mh === 9) ?
-        'октября' : (+mh === 10) ? 'ноября' : 'декабря';
-      day = (+day === 1) ? ' Понедельник': (+day === 2) ? ' вторник' : (+day === 3) ? ' среда' :
-        (+day === 4) ? ' четверг' :
-        (+day ===5) ? ' пятница' : (+day === 6) ? ' суббота' : ' воскресенье';
-      h = (+h === 1 || +h === 21) ? ' ' + h + ' час ' : (+h === 2 || +h ===3 || +h === 4 ||
-        +h === 22 || +h === 23) ? ' ' + h + ' часа ' : ' ' + h + ' часов ';
-      m = m + ' минут ';
-      s = s + ' секунд';
-      document.querySelector('.firstDate').innerHTML = 'Сегодня' + day + ',' + d + y + ',' + h + m + s; 
-}, 1000);
+// setInterval(function() {
+//   let date = new Date(),
+//       h = date.getHours(),
+//       m = date.getMinutes(),
+//       s = date.getSeconds(),
+//       y = date.getFullYear() + ' года',
+//       mh = date.getMonth(),
+//       d = date.getDate(),
+//       day = date.getDay();
+//       d = (+mh === 0) ? ' ' + d + ' января ': (+mh === 1) ? ' ' +  d + ' февраля ' : (+mh === 2) ?
+//         d + ' марта ': (+mh === 3) ? ' апреля ' : (+mh === 4) ? 'мая': (+mh === 5) ? 'июня' :
+//         (+mh === 6) ? 'июля' : (+mh === 7) ? 'августа' : (+mh === 8) ? 'сентября' : (+mh === 9) ?
+//         'октября' : (+mh === 10) ? 'ноября' : 'декабря';
+//       day = (+day === 1) ? ' Понедельник': (+day === 2) ? ' вторник' : (+day === 3) ? ' среда' :
+//         (+day === 4) ? ' четверг' :
+//         (+day ===5) ? ' пятница' : (+day === 6) ? ' суббота' : ' воскресенье';
+//       h = (+h === 1 || +h === 21) ? ' ' + h + ' час ' : (+h === 2 || +h ===3 || +h === 4 ||
+//         +h === 22 || +h === 23) ? ' ' + h + ' часа ' : ' ' + h + ' часов ';
+//       m = m + ' минут ';
+//       s = s + ' секунд';
+//       document.querySelector('.firstDate').innerHTML = 'Сегодня' + day + ',' + d + y + ',' + h + m + s; 
+// }, 1000);
 
-setInterval(function() {
-  let date = new Date(),
-      h = date.getHours(),
-      m = date.getMinutes(),
-      s = date.getSeconds(),
-      y = date.getFullYear(),
-      mh = date.getMonth(),
-      d = date.getDate(),
-      day = date.getDay();
-      d = (d < 10) ? '0' + d : d;
-      mh = ++mh;
-      mh = (mh < 10) ? '0' + mh : mh;
-      document.querySelector('.secondDate').innerHTML = d + '.' + mh + '.' + y + ' - ' + h + ':' + m + '.' + s + '`'; 
-}, 1000);
+// setInterval(function() {
+//   let date = new Date(),
+//       h = date.getHours(),
+//       m = date.getMinutes(),
+//       s = date.getSeconds(),
+//       y = date.getFullYear(),
+//       mh = date.getMonth(),
+//       d = date.getDate(),
+//       day = date.getDay();
+//       d = (d < 10) ? '0' + d : d;
+//       mh = ++mh;
+//       mh = (mh < 10) ? '0' + mh : mh;
+//       document.querySelector('.secondDate').innerHTML = d + '.' + mh + '.' + y + ' - ' + h + ':' + m + '.' + s + '`'; 
+// }, 1000);
 
 
+
+function randColor() {
+  let r = Math.floor(Math.random() * (256)),
+      g = Math.floor(Math.random() * (256)),
+      b = Math.floor(Math.random() * (256));
+  return '#' + r.toString(16) + g.toString(16) + b.toString(16);
+}
+
+let el = document.querySelector(".myElem");
+let b = randColor();
+el.style.backgroundColor = b;
+let button = document.querySelector('.changeColor');
+
+button.addEventListener('click', function() {
+  b = randColor();
+  el.style.backgroundColor = b;
+});
