@@ -247,19 +247,96 @@
 
 
 
-function randColor() {
-  let r = Math.floor(Math.random() * (256)),
-      g = Math.floor(Math.random() * (256)),
-      b = Math.floor(Math.random() * (256));
-  return '#' + r.toString(16) + g.toString(16) + b.toString(16);
-}
+// function randColor() {
+//   let r = Math.floor(Math.random() * (256)),
+//       g = Math.floor(Math.random() * (256)),
+//       b = Math.floor(Math.random() * (256));
+//   return '#' + r.toString(16) + g.toString(16) + b.toString(16);
+// }
 
-let el = document.querySelector(".myElem");
-let b = randColor();
-el.style.backgroundColor = b;
-let button = document.querySelector('.changeColor');
+// let el = document.querySelector(".myElem");
+// let b = randColor();
+// el.style.backgroundColor = b;
+// let button = document.querySelector('.changeColor');
 
-button.addEventListener('click', function() {
-  b = randColor();
-  el.style.backgroundColor = b;
-});
+// button.addEventListener('click', function() {
+//   b = randColor();
+//   el.style.backgroundColor = b;
+// });
+
+// let allImg = document.querySelectorAll('img');
+
+// let newImg = [...allImg];
+
+
+
+// let button = document.querySelector('.changeColor');
+
+//   button.addEventListener('mouseover', () => {
+//     for(let i = 0; i < allImg.length; i++) {
+//       let num = (Math.random()*300 + 'px');
+//       allImg[i].style.width = num;
+//       console.log(allImg[i]);
+//     }
+//   });
+  
+// const transport = {
+//   bike: 'honda',
+//   car: 'bentley',
+//   cycle: 'bmx'
+// };
+
+// const newTransport = {
+//   bike: 'suzuki',
+//   quadBike: 'polaris'
+// };
+
+// const currentTransport = Object.assign({},transport, newTransport);
+
+// const curTrans = {...transport, ...newTransport, ...newTransport};
+// console.log(curTrans);
+
+// Мапы
+// const map = new Map([
+//   [2019, 'autumn'],
+//   ['joker', 1]
+// ]);
+// map.set('car', {brand: 'mazda', model: 3});
+// map.set(777, 'три топора');
+// map.set(null, 'даже так');
+// map.set(NaN, 'Ух ты!');
+// map.set(undefined, 'Неожиданно!');
+
+// const obj = {
+//   name: 'Макс',
+//   age: 30
+// };
+
+// map.set(obj, 123);
+
+// const func = () => {
+//   console.log('Hello!')
+// };
+// map.set(func, 'Hello')
+// console.log(map.has(NaN));
+// console.log(map);
+
+// const collectMap = new Map([
+// ['hello', 'world'],
+// ['year', 1812]
+// ]);
+
+// collectMap.delete('year');
+
+// map.forEach((value, key) => {
+//   console.log(`ключ: ${key}, значение: ${value}`);
+// })
+
+// Сэты
+const cars = new Set(['Mazda', 'Volvo', 'BMW', 'bmw']);
+const newCars = new Set(['Mazda1', 'Volvo2', 'BMW3', 'bmw4']);
+const carsAll = new Set([...cars, ...newCars]);
+console.log([carsAll]);
+
+
+    
