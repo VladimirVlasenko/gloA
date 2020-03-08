@@ -1,3 +1,20 @@
+// 7й урок усложненное задание
+let arr = ['Воскресенье','Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+let date = new Date();
+let body = document.querySelector('body');
+console.log(date);
+console.log(date.getDay());
+for(let i=0; i < arr.length; i++) {
+    let p = document.createElement('p');
+    p.textContent = arr[i];
+    body.appendChild(p);
+    if (i === 0 || i === 6) {
+        p.style.fontStyle = 'italic';
+    }
+    if (date.getDay() === i) {
+        p.style.fontWeight = '900';
+    }
+}
 // 'use strict';
 // let lang = confirm('Вы говорите на русском языке?');
 // console.log(lang);
@@ -338,23 +355,7 @@
 // const carsAll = new Set([...cars, ...newCars]);
 // console.log([carsAll]);
 
-// 7й урок усложненное задание
-let arr = ['Воскресенье','Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-let date = new Date();
-let body = document.querySelector('body');
-console.log(date);
-console.log(date.getDay());
-for(let i=0; i < arr.length; i++) {
-    let p = document.createElement('p');
-    p.textContent = arr[i];
-    body.appendChild(p);
-    if (i === 0 || i === 6) {
-        p.style.fontStyle = 'italic';
-    }
-    if (date.getDay() === i) {
-        p.style.fontWeight = '900';
-    }
-}
+
 
 
     
